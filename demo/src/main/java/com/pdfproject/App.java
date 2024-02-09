@@ -13,7 +13,8 @@ public class App
     public static void main( String[] args )
     {
         PdfDocument pdfFile = new PdfDocument();
-        pdfFile.loadFromFile("/Users/mrizalherniawan/Downloads/Rifa.pdf");
+        // input folder location
+        pdfFile.loadFromFile("/insert/folder");
 
         pdfFile.getFileInfo().setIncrementalUpdate(false);
         
@@ -30,7 +31,7 @@ public class App
 
                 }
         }
-        
+
         // Save the document to file
         pdfFile.saveToFile("output/CompressPDFcontent.pdf", FileFormat.PDF);
 
